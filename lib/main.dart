@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
 			routes: {
 				Login.route: (_) => const Login(mode: LoginMode.login),
 				Login.createRoute: (_) => const Login(mode: LoginMode.create),
+				Home.route: (_) => const Home(),
+				Teams.route: (_) => const Teams(),
+				Profile.route: (_) => const Profile(),
+				Settings.route: (_) => const Settings(),
 			},
 		);
 	}

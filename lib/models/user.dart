@@ -21,4 +21,8 @@ class UserModel extends ChangeNotifier {
 		user = await User.create(username, password);
 		return user;
 	}
+
+	void logout() {
+		user = null;
+	}
 }

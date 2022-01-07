@@ -128,7 +128,7 @@ class _LoginState extends State<Login> {
 					if (snapshot.hasData && snapshot.connectionState == ConnectionState.done) {
 						_phase = _LoginPhase.none;
 						_errorMessage = null;
-						//WidgetsBinding.instance!.addPostFrameCallback((_) => Navigator.restorablePushReplacementNamed(context, Home.route));
+						WidgetsBinding.instance!.addPostFrameCallback((_) => Navigator.pushNamedAndRemoveUntil(context, Home.route, (_) => false));
 						return makeChildren(context);
 					} else if (snapshot.hasError && snapshot.connectionState == ConnectionState.done) {
 						// Not using set state, because we are already in a rebuild
